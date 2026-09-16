@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jowella Lim</title>
+<meta name="description" content="Product marketing for onchain finance. 8+ years in growth and product marketing, 5+ of them onchain.">
+<link rel="canonical" href="https://speicherx.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='18' r='10' fill='%23F2B23E'/%3E%3Ccircle cx='12.6' cy='16.2' r='1.4' fill='%233A2D14'/%3E%3Ccircle cx='19.4' cy='16.2' r='1.4' fill='%233A2D14'/%3E%3Cpath d='M13.2 20.6q2.8 2.2 5.6 0' fill='none' stroke='%233A2D14' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jowella Lim">
+<meta property="og:title" content="Jowella Lim">
+<meta property="og:description" content="Product marketing for onchain finance. 8+ years in growth and product marketing, 5+ of them onchain.">
+<meta property="og:url" content="https://speicherx.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@speicherx">
+<meta name="twitter:title" content="Jowella Lim">
+<meta name="twitter:description" content="Product marketing for onchain finance. 8+ years in growth and product marketing, 5+ of them onchain.">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<style>
+:root{color-scheme:light dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<style>
+:root{
+  --barh:56px;
+  --paper:#FFFFFF; --raised:#FCFAFB; --ink:#1D1D1F; --muted:#6E6E73; --faint:#86868B;
+  --rule:#EDE7EA; --rule-soft:#F5F0F2; --accent:#B8455F; --accent-soft:#FCF0F3;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;
+  --bar:rgba(255,255,255,.78);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#000000; --raised:#151516; --ink:#F5F5F7; --muted:#9E9EA4; --faint:#7C7C82;
+    --rule:#2C2A2B; --rule-soft:#1F1E1F; --accent:#F4A3B6; --accent-soft:#2A1E22;
+    --bar:rgba(0,0,0,.72);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#000000; --raised:#151516; --ink:#F5F5F7; --muted:#9E9EA4; --faint:#7C7C82;
+  --rule:#2C2A2B; --rule-soft:#1F1E1F; --accent:#F4A3B6; --accent-soft:#2A1E22;
+  --bar:rgba(0,0,0,.72);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums;letter-spacing:-.011em}
+a{color:inherit}
+::selection{background:var(--accent-soft);color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------------- top bar ---------------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
+  background:var(--bar);backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--rule)}
+.bar{max-width:1060px;margin:0 auto;padding:0 24px;height:var(--barh);
+  display:flex;align-items:center;gap:16px}
+.bar .pal{margin-left:auto}
+.wordmark{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:-.021em;
+  text-decoration:none;white-space:nowrap;line-height:1}
+.tabstrip{position:sticky;top:calc(var(--barh) + env(safe-area-inset-top,0px));z-index:40;
+  background:var(--bar);backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--rule);margin-bottom:4px}
+.tabs{max-width:1060px;margin:0 auto;padding:9px 24px;display:flex;gap:4px;
+  overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{font:inherit;font-size:14.5px;letter-spacing:-.008em;cursor:pointer;
+  color:var(--muted);background:none;border:0;border-radius:980px;
+  padding:7px 14px;white-space:nowrap;display:flex;align-items:baseline;gap:7px}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--paper);background:var(--ink)}
+.tabs .c{font-size:12px;opacity:.6;font-variant-numeric:tabular-nums}
+
+.pal{width:40px;height:40px;padding:0;border:1px solid var(--rule);border-radius:980px;
+  background:var(--raised);cursor:pointer;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;flex:none}
+.pal:hover{border-color:var(--muted)}
+.pal svg{width:26px;height:26px;display:block;transform-origin:50% 88%}
+.pal.hop svg{animation:hop .62s cubic-bezier(.3,1.3,.4,1)}
+@keyframes hop{
+  0%{transform:translateY(0) scale(1,1)}
+  18%{transform:translateY(1px) scale(1.12,.86)}
+  46%{transform:translateY(-8px) scale(.93,1.1)}
+  70%{transform:translateY(0) scale(1.08,.92)}
+  86%{transform:translateY(-2px) scale(.98,1.02)}
+  100%{transform:translateY(0) scale(1,1)}
+}
+.body{fill:#F2B23E}
+.pal.is-dark .body{fill:#7C82D6}
+.eye{fill:#3A2D14}
+.pal.is-dark .eye{fill:none;stroke:#241F3D;stroke-width:1.7;stroke-linecap:round}
+.mouth{fill:none;stroke:#3A2D14;stroke-width:1.6;stroke-linecap:round}
+.pal.is-dark .mouth{stroke:#241F3D}
+.blush{fill:#E2683F;opacity:.42}
+.pal.is-dark .blush{fill:#3E3A72;opacity:.55}
+.rays{stroke:#F2B23E;stroke-width:1.9;stroke-linecap:round;opacity:1;transition:opacity .25s}
+.pal.is-dark .rays{opacity:0}
+.zzz{fill:#7C82D6;opacity:0;transition:opacity .25s}
+.pal.is-dark .zzz{opacity:1}
+@media (prefers-reduced-motion:reduce){.pal.hop svg{animation:none}}
+
+/* ---------------- page ---------------- */
+.page{max-width:1060px;margin:0 auto;padding:0 24px 140px}
+.panel{padding-top:8px}
+.col{max-width:720px}
+
+.intro{max-width:1060px;margin:0 auto;padding:84px 24px 64px}
+.intro p{font-family:var(--display);font-size:42px;line-height:1.09;letter-spacing:-.028em;
+  margin:0 0 26px;max-width:15ch;font-weight:600}
+.intro p.sm{font-size:19px;line-height:1.53;letter-spacing:-.012em;max-width:50ch;
+  font-weight:400;color:var(--muted);margin-bottom:17px}
+.intro p:last-child{margin-bottom:0}
+
+section{padding:64px 0 0}
+.shead{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
+.shead h2{font-family:var(--display);font-size:29px;font-weight:600;letter-spacing:-.022em;margin:0}
+.shead .n{font-size:13px;color:var(--faint)}
+
+.entry{padding:34px 0;border-bottom:1px solid var(--rule-soft);max-width:720px}
+.entry:last-child{border-bottom:0}
+.meta{font-size:12.5px;color:var(--faint);letter-spacing:.01em;margin-bottom:6px}
+.entry h3{font-family:var(--display);font-size:21px;font-weight:600;line-height:1.25;
+  letter-spacing:-.018em;margin:0 0 9px;text-wrap:balance}
+.entry h3 a{text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:1px}
+.entry h3 a:hover{color:var(--accent)}
+.sub{font-size:16px;color:var(--muted);margin:0 0 12px;max-width:62ch}
+.entry p{margin:0 0 12px;max-width:62ch;font-size:16.5px;line-height:1.58}
+.entry p:last-child{margin-bottom:0}
+.pts{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.pts li{position:relative;padding-left:20px;font-size:16px;line-height:1.55;max-width:64ch;color:var(--ink)}
+.pts li::before{content:"";position:absolute;left:0;top:.66em;width:9px;height:1px;background:var(--accent)}
+.figs{font-variant-numeric:tabular-nums}
+
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+  border-radius:980px;padding:3px 10px;margin-bottom:9px}
+
+figure{margin:16px 0 0;max-width:720px}
+figure img{display:block;width:100%;max-width:100%;height:auto;border-radius:12px}
+figcaption{font-size:13px;color:var(--faint);margin-top:9px}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px;max-width:720px}
+.gal img{display:block;width:100%;aspect-ratio:4/3;max-width:100%;object-fit:cover;border-radius:12px}
+.gal.gal-wide img{aspect-ratio:3/2}
+
+.links{display:flex;gap:18px;margin-top:16px;font-size:16px}
+.links a{color:var(--accent);text-decoration:none}
+.links a:hover{text-decoration:underline}
+
+footer{border-top:1px solid var(--rule);margin-top:96px}
+.fin{max-width:1060px;margin:0 auto;padding:28px 24px 40px;display:flex;
+  gap:20px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--faint)}
+.fin a{color:var(--muted);text-decoration:none}
+.fin a:hover{color:var(--accent)}
+.fin .sp{margin-left:auto}
+
+@media (max-width:820px){
+  :root{--barh:52px}
+  .bar{padding:0 20px;gap:12px}
+  .wordmark{font-size:17px}
+  .tabs{padding:8px 20px;gap:4px}
+  .tabs button{padding:6px 12px;font-size:14px}
+  .page{padding:0 20px 110px}
+  .intro{padding:48px 20px 40px}
+  .intro p{font-size:32px;max-width:none;letter-spacing:-.026em}
+  .intro p.sm{font-size:17.5px}
+  .shead h2{font-size:25px}
+  .entry h3{font-size:19.5px}
+  section{padding-top:44px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+html{scroll-behavior:smooth}
+section{scroll-margin-top:118px}
+.entry{scroll-margin-top:118px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="bar">
+    <a class="wordmark" href="#work">Jowella Lim</a>
+    <button class="pal" id="pal" type="button" aria-label="Switch appearance" title="Switch appearance">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g class="rays"><path d="M16 3.4v2.3M26 7.2l-1.6 1.6M29 18.4h-2.3M3 18.4h2.3M6 7.2l1.6 1.6"/></g>
+        <g class="zzz"><path d="M24.4 5.2h3.6l-3.6 4.1h3.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="stroke:#7C82D6"/></g>
+        <circle class="body" cx="16" cy="19" r="9.4"/>
+        <circle class="blush" cx="10.4" cy="21" r="1.9"/>
+        <circle class="blush" cx="21.6" cy="21" r="1.9"/>
+        <g class="eyeset">
+          <circle class="eye" cx="12.9" cy="17.4" r="1.25"/>
+          <circle class="eye" cx="19.1" cy="17.4" r="1.25"/>
+        </g>
+        <path class="mouth" d="M13.6 21.4q2.4 2 4.8 0"/>
+      </svg>
+    </button>
+  </div>
+  </div>
+</header>
+
+<div class="intro">
+    <p><span class="figs">8+</span> years in growth and product marketing. <span class="figs">5+</span> of them onchain.</p>
+    <p class="sm">I make technical products legible to the people who move capital.</p>
+    <p class="sm">What currently holds my attention is payments and digital assets, and the rails being rebuilt underneath them.</p>
+    <p class="sm">Fascinated by technology. Went deep across the industry's biggest ecosystems, from Solana and Cosmos through to Ethereum infrastructure, and inside one of the world's largest exchanges.</p>
+    <p class="sm">I thrive in hard learning environments.</p>
+</div>
+
+<div class="tabstrip">
+  <nav class="tabs" id="tabs">
+    <button type="button" data-tab="work">Work <span class="c">8</span></button>
+    <button type="button" data-tab="features">Features <span class="c">18</span></button>
+    <button type="button" data-tab="side">Side Projects <span class="c">1</span></button>
+    <button type="button" data-tab="hobbies">Hobbies <span class="c">3</span></button>
+  </nav>
+</div>
+
+<main class="page panel">
+
+<section id="work">
+      <div class="shead"><h2>Work</h2><span class="n">8</span></div>
+
+      <article class="entry" id="meth">
+        <div class="meta">Jan 2025 — Present</div>
+        <h3>mETH Protocol, Product Marketing Lead</h3>
+        <p class="sub">Liquid staking and restaking, incubated by Mantle. <span class="figs">$2.19B</span> peak TVL, 4th largest ETH LST at peak.</p>
+        <p>First marketing hire. I own positioning, go-to-market and content for a protocol that has to sell to custodians and retail at the same time, and led the repositioning from DeFi-native staking product to ETH liquidity infrastructure.</p>
+        <ul class="pts">
+          <li>Institutional go-to-market across custody and exchange. Copper, Fireblocks, Anchorage and OSL integrations, alongside <span class="figs">6+</span> spot, collateral and product listings on Bybit and Kraken</li>
+          <li>Launch marketing for new asset products, vaults and our new Buffer Pool, including <span class="figs">10+</span> multi-million dollar campaigns spanning <span class="figs">20+</span> partner integrations</li>
+          <li>Content and research programme: <span class="figs">90+</span> blogs, core team interviews, and co-productions with Tier-1 publications like Messari and Four Pillars</li>
+          <li>Community past <span class="figs">40,000</span> members. <span class="figs">2.6M</span> views and <span class="figs">120K</span> interactions on X in a year</li>
+          <li>Full protocol brand rebuild, from website wireframe and content architecture to visual identity</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="mantle">
+        <div class="meta">Apr 2024 — Present</div>
+        <h3>Mantle Network, Marketing Strategist</h3>
+        <p class="sub">Crypto Optics.</p>
+        <p>Narrative and go-to-market support across Mantle's six innovation pillars, from infrastructure through to tokenized assets, pulling separate product launches into a single thesis the market could repeat.</p>
+        <ul class="pts">
+          <li>Built the foundational marketing for Ignition at launch stage, from positioning and partner narrative through to the ecosystem story</li>
+          <li>Led the official mascot program for the Mantle brand</li>
+          <li>Supported ecosystem content and partner marketing across SEA, APAC, EU and LatAm</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="ur">
+        <div class="meta">Freelance</div>
+        <h3>UR, Product Marketing</h3>
+        <p class="sub">Composable banking infrastructure, B2B2C.</p>
+        <p>Positioning and messaging for a regulated banking stack sold to partners rather than consumers.</p>
+        <ul class="pts">
+          <li>Built the narrative for Swiss IBANs, fiat on and off-ramp rails and card issuing as one composable product</li>
+          <li>Translated regulated banking primitives into language partner teams could sell with</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="binance">
+        <div class="meta">Oct 2023 — Apr 2024</div>
+        <h3>Binance, Content Operations</h3>
+        <p>Ran multilingual content operations and led Trending Cryptocurrency Content on Binance Square.</p>
+        <ul class="pts">
+          <li>Lifted average monthly content supply by <span class="figs">120k+</span></li>
+          <li>Raised overall language content quality by <span class="figs">110%</span></li>
+          <li>Directed weekly growth campaigns and product design optimization across languages</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="freelance">
+        <div class="meta">Freelance</div>
+        <h3>ChainDebrief, MarginX, OnePlanet, Content Writer</h3>
+        <p>Product and industry coverage across Cosmos and EVM ecosystems, picked up by CoinMarketCap. Editor of OnePlanetNFT.</p>
+      </article>
+
+      <article class="entry" id="coinhall">
+        <div class="meta">Apr 2022 — Jul 2023</div>
+        <h3>Coinhall, Growth &amp; Community</h3>
+        <p class="sub">Cosmos data and trading platform. Acquired by Jupiter Exchange.</p>
+        <p>Growth, community and PR for a platform doing <span class="figs">$1.8bn</span> in total on-site transactions and <span class="figs">100k</span> average monthly page views.</p>
+        <ul class="pts">
+          <li>Ran SEO strategy and weekly content, growing social past <span class="figs">19k</span></li>
+          <li>Managed <span class="figs">$2M</span> in token delegations across Cosmos validators</li>
+          <li>Ran <span class="figs">20+</span> DeFi protocol partnerships: token drops, liquidity mining, staking campaigns</li>
+          <li>Represented Coinhall at conferences and co-hosted events with partners including dYdX</li>
+          <li>Supported the market data research feeding the Genie and Seer expansions</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="solanafm">
+        <div class="meta">Jan 2022 — May 2022</div>
+        <h3>SolanaFM, Growth</h3>
+        <p class="sub">Solana explorer and data platform. Acquired by Jupiter Exchange.</p>
+        <ul class="pts">
+          <li>Ran the Alpha Testnet group: <span class="figs">100+</span> partner protocols and KOLs</li>
+          <li>Public relations, communications and community resources</li>
+          <li>Contributed to UI/UX and educational initiatives</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="gojek">
+        <div class="meta">Dec 2018 — Jun 2020</div>
+        <h3>Gojek, Acquisition</h3>
+        <p>Driver-partner acquisition at Southeast Asia's ride-hailing and payments super-app, through its growth from unicorn to decacorn.</p>
+        <ul class="pts">
+          <li>Grew active driver-partner supply past <span class="figs">30k</span></li>
+          <li>Exceeded monthly conversion targets by <span class="figs">200%</span></li>
+          <li>Trained <span class="figs">17+</span> incoming staff cohorts on performance and backend operations</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="meta">2020 — 2023</div>
+        <h3>University of London, BSc (Hons) Business &amp; Management</h3>
+      </article>
+    </section>
+
+    <section id="features">
+      <div class="shead"><h2>Features</h2><span class="n">18</span></div>
+
+      <article class="entry" id="speaking">
+        <div class="meta">Speaking</div>
+        <h3>Sydney Policy Week 2026 — Australia</h3>
+        <span class="tag">Panel</span>
+        <p>Staking Day panel at Blockchain APAC's policy week.</p>
+        <figure><img loading="lazy" decoding="async" src="img/policyweek.jpg" alt="Five-person panel on a dark stage, Jowella speaking"><figcaption>Staking Day, Policy Week 2026</figcaption></figure>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Speaking</div>
+        <h3>Ignition Launch Event 2024 — Hong Kong</h3>
+        <span class="tag">Keynote</span>
+        <p>Opened the launch with FBTC's partner and ecosystem keynote, covering its core contributors, infrastructure partners and ecosystem allies.</p>
+        <figure><img loading="lazy" decoding="async" src="img/ignition.jpg" alt="Jowella presenting the FBTC partners and ecosystem slide on stage"><figcaption>Ignition launch, Hong Kong</figcaption></figure>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Speaking</div>
+        <h3>MetaJam Asia 2022 — Singapore</h3>
+        <span class="tag">Panel</span>
+        <p>Web3 Summit, 26 to 28 July, presented by Klaytn.</p>
+        <figure><img loading="lazy" decoding="async" src="img/metajam.jpg" alt="Four-person panel at the MetaJam Asia Web3 Summit"><figcaption>MetaJam Asia Web3 Summit, Singapore</figcaption></figure>
+      </article>
+
+      <article class="entry" id="press">
+        <div class="meta">Press · Aug 2025 · New Economy, Japan</div>
+        <h3><a href="https://www.neweconomy.jp/features/mantle/489775" target="_blank" rel="noopener">クリプト業界のプロダクトマーケティングで重要なこと</a></h3>
+        <p>Interview on what matters in crypto product marketing.</p>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Press · Mar 2025 · ForkLog, Russia</div>
+        <h3><a href="https://forklog.com/news/kak-zhenshhiny-v-mantle-menyayut-web3-industriyu" target="_blank" rel="noopener">Как женщины в Mantle меняют Web3-индустрию</a></h3>
+        <p>On education and access in onchain finance.</p>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Press · May 2024 · pSTAKE</div>
+        <h3><a href="https://blog.pstake.finance/2024/05/28/speicherx-talks-bitcoin-exploring-btc-beyond-a-store-of-value/" target="_blank" rel="noopener">Talks Bitcoin: Exploring BTC Beyond a Store of Value</a></h3>
+        <p>On BTCfi, alt-L1s and institutional trust.</p>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Press · Aug 2022 · Chain Debrief</div>
+        <h3><a href="https://pexx.com/chaindebrief/jowella-on-coinhall-growth-and-cryptos-future/" target="_blank" rel="noopener">Jowella on Building For Users, Coinhall, and Crypto's Bright Future</a></h3>
+        <p>On information asymmetry and building for real users.</p>
+      </article>
+
+      <article class="entry" id="writing">
+        <div class="meta">Writing · May 2022 · Bybit × SolanaFM</div>
+        <h3>Quarterly State of the Solana Network Report</h3>
+        <p>Q1 activity, bot versus organic usage, TVL outflows and token value accrual across Solana.</p>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Aug 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/exposing-bald-coins-100m-rug-pull-developer-debunking-rumored-connections-to-ftx-co-founder-sam-90364d6313a0" target="_blank" rel="noopener">Exposing BALD Coin's $100M Rug Pull Developer</a></h3>
+        <p>Traced the deployer. Debunked the SBF rumour.</p>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Jul 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/exploring-cosmos-security-solutions-for-app-chains-interchain-alliance-rollapps-b281d614b28d" target="_blank" rel="noopener">Cosmos' Security Solutions for App-Chains</a></h3>
+        <p>Interchain Alliance and Rollapps.</p>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Aug 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/dydx-was-never-fully-decentralized-but-v4-changes-that-94f3467de7d8" target="_blank" rel="noopener">How v4 Takes dYdX Closer To Total Decentralization</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Jul 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/neutron-the-key-to-the-interchain-future-7e10933b901d" target="_blank" rel="noopener">Neutron: The Key to the Interchain Future</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Oct 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/blockchains-role-in-revolutionizing-global-remittances-18d4eaf3d8e5" target="_blank" rel="noopener">Blockchain's Role in Revolutionizing Global Remittances</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Aug 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/paypal-launches-pyusd-u-s-35747f256bb1" target="_blank" rel="noopener">PayPal launches $PYUSD</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Oct 2023</div>
+        <h3><a href="https://medium.com/@speicherx_/how-pundi-x-paves-the-way-for-global-cryptocurrency-accessibility-b8d1324e7f1a" target="_blank" rel="noopener">How Pundi X Paves the Way for Global Crypto Accessibility</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Oct 2023 · MarginX</div>
+        <h3><a href="https://blog.marginx.io/a-beginners-guide-to-decentralized-derivatives-58dcb4d1dba5" target="_blank" rel="noopener">A Beginner's Guide to Decentralized Derivatives</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Aug 2023 · Pundi AI</div>
+        <h3><a href="https://medium.com/pundiai/function-xs-f-x-core-shaping-the-future-of-interchain-transactions-with-ibc-evm-b1f0c0399b62" target="_blank" rel="noopener">f(x)Core: IBC &amp; EVM Interoperability</a></h3>
+      </article>
+
+      <article class="entry">
+        <div class="meta">Writing · Aug 2023 · Pundi AI</div>
+        <h3><a href="https://medium.com/pundiai/introduction-to-function-x-and-why-function-x-5b0275cc2fc7" target="_blank" rel="noopener">Introduction to Function X</a></h3>
+      </article>
+    </section>
+
+    <section id="side">
+      <div class="shead"><h2>Side Projects</h2><span class="n">1</span></div>
+      <article class="entry" id="synora">
+        <div class="meta">Since 2022</div>
+        <h3>Synora, Co-founder</h3>
+        <p>Synora is a Sydney studio for builders and trades. Most of them win work on reputation and have nothing online that backs it up. We build the thing that does.</p>
+        <p>Websites, capability statements, branding, local SEO, and the photo, video and drone content that fills them.</p>
+        <p>I run the business strategy, work across brand and content, and shoot on location.</p>
+        <ul class="pts">
+          <li><span class="figs">70+</span> builders and trades across NSW</li>
+          <li><span class="figs">43</span> five-star Google reviews</li>
+          <li>Clients from Sydney to the Sutherland Shire, the North Shore and the Mid North Coast</li>
+        </ul>
+        <div class="gal gal-wide">
+          <img loading="lazy" decoding="async" src="img/syn1.jpg" alt="Two builders setting out brickwork on a landscaping job">
+          <img loading="lazy" decoding="async" src="img/syn2.jpg" alt="Finished kitchen, timber and stone">
+          <img loading="lazy" decoding="async" src="img/syn3.jpg" alt="Excavation and formwork on a Sydney site">
+          <img loading="lazy" decoding="async" src="img/syn4.jpg" alt="Drone shot over a coastal Sydney suburb">
+        </div>
+        <p style="margin-top:14px"><a href="https://www.synora.com.au" target="_blank" rel="noopener">synora.com.au</a> · <a href="https://www.instagram.com/synora_media" target="_blank" rel="noopener">@synora_media</a></p>
+      </article>
+    </section>
+
+    <section id="hobbies">
+      <div class="shead"><h2>Hobbies</h2><span class="n">3</span></div>
+
+      <article class="entry" id="mountains">
+        <h3>Mountains</h3>
+        <p>I hike.</p>
+        <div class="gal">
+          <img loading="lazy" decoding="async" src="img/everest.jpg" alt="Everest Base Camp, 5364m">
+          <img loading="lazy" decoding="async" src="img/fuji.jpg" alt="Sunrise above the clouds on Mount Fuji">
+          <img loading="lazy" decoding="async" src="img/roys.jpg" alt="Roys Peak ridge above Lake Wanaka">
+          <img loading="lazy" decoding="async" src="img/snowy.jpg" alt="Above the snowline in the Snowy Mountains">
+        </div>
+      </article>
+
+      <article class="entry" id="snowboarding">
+        <h3>Snowboarding</h3>
+        <p>Recently trying to get good at it. Emphasis on trying.</p>
+        <figure style="max-width:330px"><img loading="lazy" decoding="async" src="img/snow.jpg" alt="Snowboarding in fog"></figure>
+      </article>
+
+      <article class="entry" id="countries">
+        <h3>Travel</h3>
+        <p><span class="figs">30+</span> countries and counting.</p>
+        <p>Still chasing all seven wonders of the world.</p>
+      </article>
+    </section>
+
+  </main>
+
+<footer>
+  <div class="fin">
+    <span>Jowella Lim</span>
+    <span class="sp"><a href="https://x.com/speicherx" target="_blank" rel="noopener">X</a></span>
+    <span><a href="https://www.linkedin.com/in/jowella-lim/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var pal=document.getElementById('pal');
+  function effective(){
+    var x=root.getAttribute('data-theme');
+    return x || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  }
+  function paint(){ pal.classList.toggle('is-dark', effective()==='dark'); }
+  try{var s=localStorage.getItem('sx-theme'); if(s==='dark'||s==='light') root.setAttribute('data-theme',s);}catch(e){}
+  pal.addEventListener('click',function(){
+    var next = effective()==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('sx-theme',next);}catch(e){}
+    paint();
+    pal.classList.remove('hop'); void pal.offsetWidth; pal.classList.add('hop');
+  });
+  pal.addEventListener('animationend',function(){pal.classList.remove('hop');});
+  if(window.matchMedia){
+    var mq=matchMedia('(prefers-color-scheme: dark)');
+    (mq.addEventListener?mq.addEventListener.bind(mq,'change'):mq.addListener.bind(mq))(paint);
+  }
+  paint();
+
+  var TABS=['work','features','side','hobbies'], sections={}, btns={};
+  TABS.forEach(function(t){sections[t]=document.getElementById(t);});
+  [].slice.call(document.querySelectorAll('#tabs button')).forEach(function(b){btns[b.dataset.tab]=b;});
+
+  function show(tab,scroll){
+    if(TABS.indexOf(tab)===-1) tab='work';
+    TABS.forEach(function(t){
+      if(sections[t]) sections[t].hidden = (t!==tab);
+      if(btns[t]) btns[t].classList.toggle('on',t===tab);
+    });
+    try{history.replaceState(null,'','#'+tab);}catch(e){}
+    if(scroll){
+      var strip=document.querySelector('.tabstrip');
+      var bar=document.querySelector('.topbar');
+      if(strip&&bar){
+        var y=strip.getBoundingClientRect().top+window.pageYOffset-bar.offsetHeight;
+        window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+      }
+    }
+  }
+  TABS.forEach(function(t){
+    if(btns[t]) btns[t].addEventListener('click',function(){show(t,true);});
+  });
+  document.querySelector('.wordmark').addEventListener('click',function(e){
+    e.preventDefault(); show('work',false);
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  var h=(location.hash||'').slice(1);
+  show(TABS.indexOf(h)>-1?h:'work',false);
+})();
+</script>
+</body>
+</html>
