@@ -587,13 +587,18 @@ section{scroll-margin-top:118px}
   TABS.forEach(function(t){sections[t]=document.getElementById(t);});
   [].slice.call(document.querySelectorAll('#tabs button')).forEach(function(b){btns[b.dataset.tab]=b;});
 
-  function show(tab,scroll){
+  function show(tab,scroll,push){
     if(TABS.indexOf(tab)===-1) tab='work';
     TABS.forEach(function(t){
       if(sections[t]) sections[t].hidden = (t!==tab);
       if(btns[t]) btns[t].classList.toggle('on',t===tab);
     });
-    try{history.replaceState(null,'','#'+tab);}catch(e){}
+    if(push){
+      try{
+        var url = (tab==='work') ? (location.pathname+location.search) : ('#'+tab);
+        history.replaceState(null,'',url);
+      }catch(e){}
+    }
     if(scroll){
       var strip=document.querySelector('.tabstrip');
       var bar=document.querySelector('.topbar');
@@ -604,15 +609,15 @@ section{scroll-margin-top:118px}
     }
   }
   TABS.forEach(function(t){
-    if(btns[t]) btns[t].addEventListener('click',function(){show(t,true);});
+    if(btns[t]) btns[t].addEventListener('click',function(){show(t,true,true);});
   });
   document.querySelector('.wordmark').addEventListener('click',function(e){
-    e.preventDefault(); show('work',false);
+    e.preventDefault(); show('work',false,true);
     window.scrollTo({top:0,behavior:'smooth'});
   });
 
   var h=(location.hash||'').slice(1);
-  show(TABS.indexOf(h)>-1?h:'work',false);
+  show(TABS.indexOf(h)>-1?h:'work',false,false);
 })();
 </script>
 </body>
