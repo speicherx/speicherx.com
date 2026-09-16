@@ -12,7 +12,7 @@
 <meta property="og:title" content="Jowella Lim">
 <meta property="og:description" content="Product marketing for onchain finance. 8+ years in growth and product marketing, 5+ of them onchain.">
 <meta property="og:url" content="https://speicherx.com/">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@speicherx">
 <meta name="twitter:title" content="Jowella Lim">
 <meta name="twitter:description" content="Product marketing for onchain finance. 8+ years in growth and product marketing, 5+ of them onchain.">
@@ -126,6 +126,27 @@ section{padding:64px 0 0}
 
 .entry{padding:34px 0;border-bottom:1px solid var(--rule-soft);max-width:720px}
 .entry:last-child{border-bottom:0}
+
+/* collapsible work rows */
+details.entry{padding:0}
+details.entry>summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;
+  border-radius:8px;transition:background .15s}
+details.entry>summary::-webkit-details-marker{display:none}
+details.entry>summary:hover{background:var(--rule-soft)}
+details.entry>summary:hover .chev{color:var(--ink)}
+details.entry>summary>*{margin-left:10px;margin-right:0}
+details.entry>summary .meta{margin-bottom:4px}
+details.entry>summary h3{margin-bottom:5px}
+details.entry>summary .sub{margin-bottom:0}
+.chev{position:absolute;right:14px;top:50%;width:11px;height:11px;margin-top:-7px;
+  border-right:1.8px solid var(--faint);border-bottom:1.8px solid var(--faint);
+  transform:rotate(45deg);transition:transform .22s ease, color .15s;
+  border-color:currentColor;color:var(--faint)}
+details.entry[open] .chev{transform:rotate(-135deg);margin-top:-3px}
+.ebody{padding:4px 10px 26px;animation:reveal .22s ease}
+@keyframes reveal{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+.entry.flat{padding:24px 10px}
+@media (prefers-reduced-motion:reduce){.ebody{animation:none}.chev{transition:none}}
 .meta{font-size:12.5px;color:var(--faint);letter-spacing:.01em;margin-bottom:6px}
 .entry h3{font-family:var(--display);font-size:21px;font-weight:600;line-height:1.25;
   letter-spacing:-.018em;margin:0 0 9px;text-wrap:balance}
@@ -134,8 +155,8 @@ section{padding:64px 0 0}
 .sub{font-size:16px;color:var(--muted);margin:0 0 12px;max-width:62ch}
 .entry p{margin:0 0 12px;max-width:62ch;font-size:16.5px;line-height:1.58}
 .entry p:last-child{margin-bottom:0}
-.pts{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
-.pts li{position:relative;padding-left:20px;font-size:16px;line-height:1.55;max-width:64ch;color:var(--ink)}
+.pts{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+.pts li{position:relative;padding-left:20px;font-size:16px;line-height:1.62;max-width:64ch;color:var(--ink)}
 .pts li::before{content:"";position:absolute;left:0;top:.66em;width:9px;height:1px;background:var(--accent)}
 .figs{font-variant-numeric:tabular-nums}
 
@@ -173,6 +194,13 @@ footer{border-top:1px solid var(--rule);margin-top:96px}
   .intro p.sm{font-size:17.5px}
   .shead h2{font-size:25px}
   .entry h3{font-size:19.5px}
+  details.entry>summary{padding:17px 34px 17px 0}
+  details.entry>summary>*{margin-left:0}
+  .ebody{padding:2px 0 22px}
+  .entry.flat{padding:20px 0}
+  .chev{right:6px}
+  .pts li{font-size:15.5px;line-height:1.62}
+  .entry p{font-size:16px}
   section{padding-top:44px}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -225,100 +253,149 @@ section{scroll-margin-top:118px}
 <section id="work">
       <div class="shead"><h2>Work</h2><span class="n">8</span></div>
 
-      <article class="entry" id="meth">
+            <details class="entry" id="meth">
+        <summary>
         <div class="meta">Jan 2025 — Present</div>
         <h3>mETH Protocol, Product Marketing Lead</h3>
         <p class="sub">Liquid staking and restaking, incubated by Mantle. <span class="figs">$2.19B</span> peak TVL, 4th largest ETH LST at peak.</p>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <p>First marketing hire. I own positioning, go-to-market and content for a protocol that has to sell to custodians and retail at the same time, and led the repositioning from DeFi-native staking product to ETH liquidity infrastructure.</p>
         <ul class="pts">
           <li>Institutional go-to-market across custody and exchange. Copper, Fireblocks, Anchorage and OSL integrations, alongside <span class="figs">6+</span> spot, collateral and product listings on Bybit and Kraken</li>
           <li>Launch marketing for new asset products, vaults and our new Buffer Pool, including <span class="figs">10+</span> multi-million dollar campaigns spanning <span class="figs">20+</span> partner integrations</li>
           <li>Content and research programme: <span class="figs">90+</span> blogs, core team interviews, and co-productions with Tier-1 publications like Messari and Four Pillars</li>
-          <li>Community past <span class="figs">40,000</span> members. <span class="figs">2.6M</span> views and <span class="figs">120K</span> interactions on X in a year</li>
+          <li>Community past <span class="figs">40K</span> members. <span class="figs">2.6M</span> views and <span class="figs">120K</span> interactions on X in a year</li>
           <li>Full protocol brand rebuild, from website wireframe and content architecture to visual identity</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="mantle">
+            <details class="entry" id="mantle">
+        <summary>
         <div class="meta">Apr 2024 — Present</div>
         <h3>Mantle Network, Marketing Strategist</h3>
         <p class="sub">Crypto Optics.</p>
-        <p>Narrative and go-to-market support across Mantle's six innovation pillars, from infrastructure through to tokenized assets, pulling separate product launches into a single thesis the market could repeat.</p>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
+        <p>Narrative and go-to-market support spanning Mantle's six innovation pillars, from infrastructure through to tokenized assets, pulling separate product launches into a single thesis the market could repeat.</p>
         <ul class="pts">
-          <li>Built the foundational marketing for Ignition at launch stage, from positioning and partner narrative through to the ecosystem story</li>
-          <li>Led the official mascot program for the Mantle brand</li>
+          <li>Built Ignition's foundational marketing, from positioning to launch</li>
+          <li>Led the official mascot program for the brand</li>
           <li>Supported ecosystem content and partner marketing across SEA, APAC, EU and LatAm</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="ur">
+            <details class="entry" id="ur">
+        <summary>
         <div class="meta">Freelance</div>
         <h3>UR, Product Marketing</h3>
         <p class="sub">Composable banking infrastructure, B2B2C.</p>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <p>Positioning and messaging for a regulated banking stack sold to partners rather than consumers.</p>
         <ul class="pts">
           <li>Built the narrative for Swiss IBANs, fiat on and off-ramp rails and card issuing as one composable product</li>
           <li>Translated regulated banking primitives into language partner teams could sell with</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="binance">
+            <details class="entry" id="binance">
+        <summary>
         <div class="meta">Oct 2023 — Apr 2024</div>
         <h3>Binance, Content Operations</h3>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <p>Ran multilingual content operations and led Trending Cryptocurrency Content on Binance Square.</p>
         <ul class="pts">
           <li>Lifted average monthly content supply by <span class="figs">120k+</span></li>
           <li>Raised overall language content quality by <span class="figs">110%</span></li>
           <li>Directed weekly growth campaigns and product design optimization across languages</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="freelance">
+            <details class="entry" id="freelance">
+        <summary>
         <div class="meta">Freelance</div>
         <h3>ChainDebrief, MarginX, OnePlanet, Content Writer</h3>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <p>Product and industry coverage across Cosmos and EVM ecosystems, picked up by CoinMarketCap. Editor of OnePlanetNFT.</p>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="coinhall">
+            <details class="entry" id="coinhall">
+        <summary>
         <div class="meta">Apr 2022 — Jul 2023</div>
         <h3>Coinhall, Growth &amp; Community</h3>
         <p class="sub">Cosmos data and trading platform. Acquired by Jupiter Exchange.</p>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <p>Growth, community and PR for a platform doing <span class="figs">$1.8bn</span> in total on-site transactions and <span class="figs">100k</span> average monthly page views.</p>
         <ul class="pts">
           <li>Ran SEO strategy and weekly content, growing social past <span class="figs">19k</span></li>
           <li>Managed <span class="figs">$2M</span> in token delegations across Cosmos validators</li>
-          <li>Ran <span class="figs">20+</span> DeFi protocol partnerships: token drops, liquidity mining, staking campaigns</li>
+          <li><span class="figs">20+</span> DeFi protocol partnerships: token drops, liquidity mining, staking campaigns</li>
           <li>Represented Coinhall at conferences and co-hosted events with partners including dYdX</li>
           <li>Supported the market data research feeding the Genie and Seer expansions</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="solanafm">
+            <details class="entry" id="solanafm">
+        <summary>
         <div class="meta">Jan 2022 — May 2022</div>
         <h3>SolanaFM, Growth</h3>
         <p class="sub">Solana explorer and data platform. Acquired by Jupiter Exchange.</p>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <ul class="pts">
           <li>Ran the Alpha Testnet group: <span class="figs">100+</span> partner protocols and KOLs</li>
           <li>Public relations, communications and community resources</li>
           <li>Contributed to UI/UX and educational initiatives</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry" id="gojek">
+            <details class="entry" id="gojek">
+        <summary>
         <div class="meta">Dec 2018 — Jun 2020</div>
         <h3>Gojek, Acquisition</h3>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="ebody">
         <p>Driver-partner acquisition at Southeast Asia's ride-hailing and payments super-app, through its growth from unicorn to decacorn.</p>
         <ul class="pts">
           <li>Grew active driver-partner supply past <span class="figs">30k</span></li>
           <li>Exceeded monthly conversion targets by <span class="figs">200%</span></li>
           <li>Trained <span class="figs">17+</span> incoming staff cohorts on performance and backend operations</li>
         </ul>
-      </article>
+      
+        </div>
+      </details>
 
-      <article class="entry">
+            <div class="entry flat">
         <div class="meta">2020 — 2023</div>
         <h3>University of London, BSc (Hons) Business &amp; Management</h3>
-      </article>
+      
+      </div>
     </section>
 
     <section id="features">
