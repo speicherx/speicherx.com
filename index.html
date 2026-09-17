@@ -16,8 +16,7 @@
 <meta name="twitter:site" content="@speicherx">
 <meta name="twitter:title" content="Jowella Lim">
 <meta name="twitter:description" content="Product marketing for onchain finance. 8+ years in growth and product marketing, 5+ of them onchain.">
-<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF">
 <style>
 :root{color-scheme:light dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
@@ -292,7 +291,7 @@ section{scroll-margin-top:118px}
         <div class="ebody">
           <p>Composable financial infrastructure, B2B2C. Positioning and messaging for a regulated financial stack sold to partners rather than consumers.</p>
           <ul class="pts">
-            <li>Built the narrative for Swiss IBANs, fiat on and off-ramp rails and card issuing as one composable product</li>
+            <li>Scaled the narrative for Swiss IBANs, fiat on and off-ramp rails and card issuing as one composable product</li>
             <li>Translated regulated financial primitives into language partner teams could sell with</li>
           </ul>
         </div>
@@ -353,7 +352,7 @@ section{scroll-margin-top:118px}
           <p>Solana explorer and data platform, acquired by Jupiter Exchange.</p>
           <ul class="pts">
             <li>Ran the Alpha Testnet group: <span class="figs">100+</span> partner protocols and KOLs</li>
-            <li>Owned public relations, communications and community resources</li>
+            <li>Supported public relations, communications and community resources</li>
             <li>Contributed to UI/UX and educational initiatives</li>
           </ul>
         </div>
@@ -368,7 +367,7 @@ section{scroll-margin-top:118px}
         <div class="ebody">
           <p>Southeast Asia's ride-hailing and payments super-app. Driver-partner acquisition through the company's growth from unicorn to decacorn.</p>
           <ul class="pts">
-            <li>Grew active driver-partner supply past <span class="figs">30k</span></li>
+            <li>Expanded active driver-partner supply past <span class="figs">30k</span></li>
             <li>Exceeded monthly conversion targets by <span class="figs">200%</span></li>
             <li>Trained <span class="figs">17+</span> incoming staff cohorts on performance and backend operations</li>
           </ul>
@@ -482,7 +481,7 @@ section{scroll-margin-top:118px}
       <div class="shead"><h2>Side Projects</h2><span class="n">1</span></div>
       <article class="entry" id="synora">
         <div class="meta">Since 2022</div>
-        <h3>Synora, Co-founder</h3>
+        <h3>Synora, Co-Founder</h3>
         <p>Synora is a Sydney studio for builders and trades. Most of them win work on reputation and have nothing online that backs it up. We build the thing that does.</p>
         <p>Websites, capability statements, branding, local SEO, and the photo, video and drone content that fills them.</p>
         <p>I run the business strategy, work across brand and content, and shoot on location.</p>
@@ -534,7 +533,7 @@ section{scroll-margin-top:118px}
 
       <article class="entry" id="countries">
         <h3>Travel</h3>
-        <p><span class="figs">30+</span> countries and counting.</p>
+        <p><span class="figs">30+</span> countries and counting (🇳🇴🇫🇮🇬🇷🇨🇳 fav to date)!</p>
         <p>Still chasing all seven wonders of the world.</p>
       </article>
     </section>
@@ -558,7 +557,10 @@ section{scroll-margin-top:118px}
     return x || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
   }
   function paint(){ pal.classList.toggle('is-dark', effective()==='dark'); }
-  try{var s=localStorage.getItem('sx-theme'); if(s==='dark'||s==='light') root.setAttribute('data-theme',s);}catch(e){}
+  var stored=null;
+  try{stored=localStorage.getItem('sx-theme');}catch(e){}
+  // light is the default; dark only when the visitor has chosen it
+  root.setAttribute('data-theme',(stored==='dark'||stored==='light')?stored:'light');
   pal.addEventListener('click',function(){
     var next = effective()==='dark' ? 'light' : 'dark';
     root.setAttribute('data-theme',next);
